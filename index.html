@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#f5f1d9">
+    <div class="main_area">
+    <div class="header">
+        <img src="ylogo.jpg" alt="">
+        <div class="container">
+            <div class="box">
+              <img src="back.png" alt="">
+              <p>UNDO</p>
+            </div>
+            <div class="box">
+              <img src="Back1.png" alt="">
+              <p>REDO</p>
+            </div>
+        </div>
+        <div class="addtext"><b><font size="5px">T &nbsp;</font></b>ADD TEXT</div>
+      </div>
+
+      <div class="footer">
+
+        <div >
+            <select class="select">
+                <option value="s" disabled selected>Fonts</option>
+                <option value="1">Lucida Sans</option>
+                <option value="2">Arial</option>
+                <option value="3">Cambria</option>
+                <option value="4">Cursive</option>
+                <option  value="5">Italic</option>
+                
+            </select>
+
+            <select class="size">
+              <option   disabled selected>Size</option>
+              <option  value="h0">48px</option>
+              <option  value="h1">36px</option>
+              <option  value="h2">24px</option>
+              <option  value="h3">18px</option>
+              <option  value="h4">14px</option>
+          </select>
+        </div>
+        
+        
+        <div class="f-buttons">
+        <button class="feature" id="bold"><i class='bx bx-bold'></i></button>
+        <button class="feature" id="italic"><i class='bx bx-italic' ></i></button>
+        <button class="feature" id="justifyCenter"><i class='bx bx-align-middle' ></i></button>
+        <button class="feature" id="underline"><i class='bx bx-underline' ></i></button>
+        <input type="color" class="inp" style="border-radius: 50%; margin-left: 10px; cursor: pointer; width: 30px; height: 30px;">Font-Color
+        <input type="color" class="back" style="border-radius: 50%; margin-left: 10px; cursor: pointer; width: 30px; height: 30px;">Background
+      </div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
