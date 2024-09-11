@@ -1,5 +1,5 @@
 let textElements = [];
-alert("Welcome! My name is Yash ");
+
 const addtext = document.getElementsByClassName('addtext')[0];
 const mainarea = document.getElementsByClassName('main_area')[0];
 
@@ -7,15 +7,15 @@ addtext.addEventListener('click', () => {
   const newText = document.createElement('div');
   newText.className = 'text';
   newText.contentEditable = 'true';
-  newText.style.width = '260px'; 
-  newText.style.height = '20px'; 
+  newText.style.width = '280px'; 
+  newText.style.height = '10px'; 
   newText.style.border = '1px solid black'; 
   newText.style.padding = '10px'; 
   newText.style.fontSize = '18px'; 
   newText.style.textAlign = 'center'; 
   newText.style.cursor = 'text'; 
   newText.style.position = 'absolute'; 
-  newText.style.overflow = 'true';
+  newText.style.whiteSpace = 'nowrap';
 
   mainarea.appendChild(newText);
   textElements.push(newText);
@@ -43,9 +43,9 @@ addtext.addEventListener('click', () => {
             case 'italic':
               selectedTextElement.style.fontStyle = document.queryCommandState('italic') ? 'italic' : 'normal';
               break;
-            case 'justifyCenter':
-              selectedTextElement.style.left = '38%';
-              break;
+              case 'justifyCenter':
+              selectedTextElement.style.left = '36%';
+               break;
             case 'underline':
               selectedTextElement.style.textDecoration = document.queryCommandState('underline') ? 'underline' : 'none';
                 break;      
