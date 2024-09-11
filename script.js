@@ -1,5 +1,5 @@
 let textElements = [];
-
+alert("Welcome! My name is Yash ");
 const addtext = document.getElementsByClassName('addtext')[0];
 const mainarea = document.getElementsByClassName('main_area')[0];
 
@@ -24,12 +24,13 @@ addtext.addEventListener('click', () => {
   let offsetX = 0;
   let offsetY = 0;
 
+  //selecting the text
   newText.addEventListener('mousedown', (e) => {
     isDragging = true;
     offsetX = e.clientX - newText.offsetLeft;
     offsetY = e.clientY - newText.offsetTop;
 
-
+      // footer buttons
     features.forEach((feature) => {
       feature.addEventListener('click', () => {
         if (selectedTextElement && !selectedTextElement.isNew) {
@@ -55,7 +56,7 @@ addtext.addEventListener('click', () => {
   });
 
 
-
+  // dragging the text
   document.addEventListener('mousemove', (e) => {
     if (isDragging) {
       newText.style.border='none';
@@ -65,6 +66,7 @@ addtext.addEventListener('click', () => {
   }
   });
 
+  // leaving the text
   document.addEventListener('mouseup', () => {
     isDragging = false;
 
@@ -98,6 +100,7 @@ addtext.addEventListener('click', () => {
     '5': 'italic'
   };
   
+    //font size
   sizes.forEach((size) => {
     size.addEventListener('change', (e) => {
       const selectedSize = e.target.value;
@@ -105,6 +108,8 @@ addtext.addEventListener('click', () => {
     });
   });
 
+
+  // font type
   fonttyp.forEach((select)=>{
     select.addEventListener('change',(e)=>{
       const selectedFont = e.target.value;
@@ -113,7 +118,7 @@ addtext.addEventListener('click', () => {
   });
 
 
-
+  // input color
  inps.forEach((inp) => {
   inp.addEventListener("input", (e) => {
     const color = e.target.value;
@@ -122,6 +127,8 @@ addtext.addEventListener('click', () => {
     }
   });
 
+
+  //background color
   const back_color=document.querySelectorAll('.back');
   back_color.forEach((back) => {
     back.addEventListener("input", (e) => {
@@ -129,8 +136,6 @@ addtext.addEventListener('click', () => {
         mainarea.style.backgroundColor = bgcolor;
     });
   });
-
-
 
   });
 });
